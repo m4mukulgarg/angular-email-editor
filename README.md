@@ -1,110 +1,27 @@
-# Angular Email Editor
+# AngularEmailEditor
 
-The excellent drag-n-drop email editor by [Unlayer](https://unlayer.com) as a [Angular](https://angular.io/) *wrapper component*. This is the most powerful and developer friendly visual email builder for your app.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-Video Overview |
-:---: |
-[![Angular Email Editor](https://s3.amazonaws.com/unroll-assets/unrollyoutube.png)](https://www.youtube.com/watch?v=MIWhX-NF3j8) |
-*Watch video overview: https://youtu.be/MIWhX-NF3j8* |
+## Development server
 
-## Live Demo
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Check out the live demo here: https://angular-email-editor-demo.netlify.com/ ([Source Code](https://github.com/unlayer/angular-email-editor/tree/master/src))
+## Code scaffolding
 
-## Installation
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-The easiest way to use Angular Email Editor is to install it from Npm or Yarn and include it in your own Angular build process.
+## Build
 
-```
-npm install angular-email-editor --save
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Usage
+## Running unit tests
 
-Next, you'll need to import the Email Editor module in your app's module.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-**app.module.ts**
+## Running end-to-end tests
 
-```ts
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-import { EmailEditorModule } from 'angular-email-editor';
-...
+## Further help
 
-@NgModule({
-  ...
-  imports: [ EmailEditorModule ],
-  ...
-});
-```
-
-**app.component.ts**
-
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { EmailEditorComponent } from 'angular-email-editor';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'angular-email-editor';
-
-  @ViewChild(EmailEditorComponent)
-  private emailEditor: EmailEditorComponent;
-  
-  editorLoaded() {
-    // load the design json here
-    // this.emailEditor.editor.loadDesign({});
-  }
-
-  exportHtml() {
-    this.emailEditor.editor.exportHtml((data) => console.log('exportHtml', data));
-  }
-}
-```
-
-**app.component.html**
-
-```html
-<div class="container">
-  <button (click)="exportHtml()">Export</button>
-  <email-editor (loaded)="editorLoaded($event)"></email-editor>
-</div>
-```
-
-### Methods
-| method          | params                   | description                                                    |
-| --------------- | ------------------------ | -------------------------------------------------------------- |
-| **loadDesign**  | `Object data`            | Takes the design JSON and loads it in the editor               |
-| **saveDesign**  | `Function callback`      | Returns the design JSON in a callback function                 |
-| **exportHtml**  | `Function callback`      | Returns the design HTML and JSON in a callback function        |
-
-See the [example source](https://github.com/unlayer/angular-email-editor/tree/master/src) for a reference implementation.
-
-### Properties
-
-* `minHeight` `String` minimum height to initialize the editor with (default 500px)
-* `options` `Object` options passed to the Unlayer editor instance (default {})
-* `tools` `Object` configuration for the built-in and custom tools (default {})
-* `appearance` `Object` configuration for appearance and theme (default {})
-* `projectId` `Integer` Unlayer project ID (optional)
-* `loaded` `Function` called when the editor has finished loading
-
-See the [Unlayer Docs](https://docs.unlayer.com/) for all available options.
-
-## Custom Tools
-
-Custom tools can help you add your own content blocks to the editor. Every application is different and needs different tools to reach it's full potential. [Learn More](https://docs.unlayer.com/docs/custom-tools)
-
-[![Custom Tools](https://unroll-assets.s3.amazonaws.com/custom_tools.png)](https://docs.unlayer.com/docs/custom-tools)
-
-
-## Localization
-
-You can submit new language translations by creating a PR on this GitHub repo: https://github.com/unlayer/translations. Translations managed by [PhraseApp](https://phraseapp.com)
-
-### License
-
-Copyright (c) 2020 Unlayer. [MIT](LICENSE) Licensed.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ExampleModule } from './example/example.module';
+import { BaseModule } from './base/base.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ExampleModule,
+    BaseModule,
     DashboardModule,
   ],
   providers: [],

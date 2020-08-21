@@ -1,0 +1,19 @@
+parcelRequire = function (e, r, t, n) { var i, o = "function" == typeof parcelRequire && parcelRequire, u = "function" == typeof require && require; function f(t, n) { if (!r[t]) { if (!e[t]) { var i = "function" == typeof parcelRequire && parcelRequire; if (!n && i) return i(t, !0); if (o) return o(t, !0); if (u && "string" == typeof t) return u(t); var c = new Error("Cannot find module '" + t + "'"); throw c.code = "MODULE_NOT_FOUND", c } p.resolve = function (r) { return e[t][1][r] || r }, p.cache = {}; var l = r[t] = new f.Module(t); e[t][0].call(l.exports, p, l, l.exports, this) } return r[t].exports; function p(e) { return f(p.resolve(e)) } } f.isParcelRequire = !0, f.Module = function (e) { this.id = e, this.bundle = f, this.exports = {} }, f.modules = e, f.cache = r, f.parent = o, f.register = function (r, t) { e[r] = [function (e, r) { r.exports = t }, {}] }; for (var c = 0; c < t.length; c++)try { f(t[c]) } catch (e) { i || (i = e) } if (t.length) { var l = f(t[t.length - 1]); "object" == typeof exports && "undefined" != typeof module ? module.exports = l : "function" == typeof define && define.amd ? define(function () { return l }) : n && (this[n] = l) } if (parcelRequire = f, i) throw i; return f }({
+    "jbf7": [function (require, module, exports) {
+        var n, t, e, i, o = 150, r = 2; !function () { n = h, t = c, e = function () { l ? c() : h() }, i = function () { t(), m = [] }; var a = ["DodgerBlue", "OliveDrab", "Gold", "Pink", "SlateBlue", "LightBlue", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"], l = !1, d = null, m = [], u = 0; function w(n, t, e) { return n.color = a[Math.random() * a.length | 0], n.x = Math.random() * t, n.y = Math.random() * e - e, n.diameter = 10 * Math.random() + 5, n.tilt = 10 * Math.random() - 10, n.tiltAngleIncrement = .07 * Math.random() + .05, n.tiltAngle = 0, n } function h() { var n = window.innerWidth, t = window.innerHeight; window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (n) { return window.setTimeout(n, 16.6666667) }; var e = document.getElementById("confetti-canvas"); null === e && ((e = document.createElement("canvas")).setAttribute("id", "confetti-canvas"), e.setAttribute("style", "display:block;z-index:999999;pointer-events:none;position:absolute;top:0;left:0;"), document.body.appendChild(e), e.width = n, e.height = t, window.addEventListener("resize", function () { e.width = window.innerWidth, e.height = window.innerHeight }, !0)); for (var i = e.getContext("2d"); m.length < o;)m.push(w({}, n, t)); l = !0, null === d && function n() { i.clearRect(0, 0, window.innerWidth, window.innerHeight), 0 === m.length ? d = null : (!function () { var n, t = window.innerWidth, e = window.innerHeight; u += .01; for (var i = 0; i < m.length; i++)n = m[i], !l && n.y < -15 ? n.y = e + 100 : (n.tiltAngle += n.tiltAngleIncrement, n.x += Math.sin(u), n.y += .5 * (Math.cos(u) + n.diameter + r), n.tilt = 15 * Math.sin(n.tiltAngle)), (n.x > t + 20 || n.x < -20 || n.y > e) && (l && m.length <= o ? w(n, t, e) : (m.splice(i, 1), i--)) }(), function (n) { for (var t, e, i = 0; i < m.length; i++)t = m[i], n.beginPath(), n.lineWidth = t.diameter, n.strokeStyle = t.color, e = t.x + t.tilt, n.moveTo(e + t.diameter / 2, t.y), n.lineTo(e, t.y + t.tilt + t.diameter / 2), n.stroke() }(i), d = requestAnimFrame(n)) }() } function c() { l = !1 } }(), n();
+    }, {}]
+}, {}, ["jbf7"], null)
+    //# sourceMappingURL=/custom.js.map
+
+    ;
+var e;
+preview = function (e) {
+    var t;
+    null === (t = this.frame) || void 0 === t || t.postMessage("showPreview", {
+        device: e
+    })
+}
+var x;
+function (x) {
+
+} (y);

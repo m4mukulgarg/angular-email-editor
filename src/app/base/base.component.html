@@ -1,0 +1,15 @@
+<div class="container">
+  <div id="bar">
+    <img src="https://cf.bravurasolutions.com/uploads/2019/02/bravura_solutions_logo_white.svg" alt="Global">
+    <h1></h1>
+    <h1>Correspondence</h1>
+    <!-- <button (click)="blankTemplate()">New Blank</button> -->
+    <button (click)="merge()">Merge</button>
+    <button (click)="saveDesign()">Save Design</button>
+    <button (click)="loadPrudential()">Temp-Pru</button>
+    <button (click)="loadBSL()">Temp-BSL</button>
+    <button (click)="exportHtml()">Export HTML</button>
+    <!-- <button [routerLink]="['/dashboard']">Dashboard</button> -->
+  </div>
+  <email-editor [options]="options" (loaded)="editorLoaded($event)" #editor></email-editor>
+</div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { EmailEditorModule } from 'email-editor';
+import { EmailEditorModule } from 'src/app/email-editor/public_api';
 
 import { DashboardComponent } from './dashboard.component';
 import { DesignListComponent } from './design-list/design-list.component';
